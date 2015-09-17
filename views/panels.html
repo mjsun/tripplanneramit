@@ -1,0 +1,19 @@
+<div class="panel-body">
+  <div>
+    <label for="{{label}}" class="opaque">{{label}}</label>
+  </div>
+  <div>
+    <div class="col-lg-11">
+      <select class="form-control background-white opaque" name="{{label}}">
+        {% for item in items %}
+          <option value="{{item.name}}">{{item.name}}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <div class="col-lg-1">
+      <a href="#" class="opaque" id="target1">
+        <span class="glyphicon glyphicon-plus-sign"></span>
+      </a>
+    </div>
+  </div>
+</div>

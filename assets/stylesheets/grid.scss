@@ -1,0 +1,90 @@
+@function width($col-width, $max-column, $gutter-width) {
+  @return (100% / ($max-column / $col-width)) - $gutter-width * 2;
+};
+
+$max-columns: 12;
+$gutter: 1%;
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  clear: both;
+}
+
+.row {
+  clear: both;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.col-lg-1 {
+  width: width(1, $max-columns, $gutter);
+}
+
+.col-lg-2 {
+  width: width(2, $max-columns, $gutter);
+}
+
+.col-lg-3 {
+  width: width(3, $max-columns, $gutter);
+}
+
+.col-lg-4 {
+ width: width(4, $max-columns, $gutter);
+ margin: $gutter;
+}
+
+.col-lg-5 {
+  width: width(5, $max-columns, $gutter);
+}
+
+.col-lg-6 {
+  width: width(6, $max-columns, $gutter);
+}
+
+.col-lg-7 {
+  width: width(7, $max-columns, $gutter);
+}
+
+.col-lg-8 {
+  width: width(8, $max-columns, $gutter);
+  margin: $gutter;
+}
+
+.col-lg-9 {
+  width: width(9, $max-columns, $gutter);
+}
+
+.col-lg-10 {
+  width: width(10, $max-columns, $gutter);
+}
+
+.col-lg-11 {
+  width: width(11, $max-columns, $gutter);
+}
+
+.col-lg-12 {
+  width: width(12, $max-columns, $gutter);
+}
+
+.col-sm-8 {
+  width: width(8, $max-columns, $gutter);
+}
+
+.col-sm-4 {
+  width: width(4, $max-columns, $gutter);
+}
+
+div[class^="col"] {
+  //margin: $gutter;
+
+  img {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+
+.text-center {
+  text-align: center;
+}

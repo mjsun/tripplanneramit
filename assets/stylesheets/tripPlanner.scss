@@ -1,0 +1,63 @@
+body {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.navbar {
+  background-color: #56564E;
+}
+
+
+#map {
+  box-sizing: border-box;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+#draggable {
+  width: auto;
+  height: auto;
+  padding: 0.5em;
+  position: absolute;
+  top: 100px;
+  right: 10px;
+  z-index: 99;
+  background-color: rgba(255, 255, 255, 0.5);
+
+  .opaque {
+    opacity: 1;
+  }
+  .background-white {
+    background-color: #FFF;
+  }
+}
+
+#draggable2 {
+  width: auto;
+  height: auto;
+  padding: 0.5em;
+  border: 0;
+  position: absolute;
+  top: 300px;
+  left: 10px;
+  z-index: 99;
+  background-color: rgba(255, 255, 255, 0.5);
+  .opaque {
+    opacity: 1;
+  }
+  .background-white {
+    background-color: #FFF;
+  }
+  .active {
+    background-color: #337ab7;
+    color: white;
+  }
+  // zoom: 1;
+  // filter: alpha(opacity=50);
+  // opacity: 0.5;
+}
+
+

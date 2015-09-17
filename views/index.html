@@ -1,0 +1,104 @@
+{% extends "layout.html" %}
+
+  <div>Hello!</div>
+
+  <!-- {% include 'panel.html' with data.panelItems('Hotels', hotels) %} can make a function in the promise.all and separate out the html file to return generic code for each panel item -->
+
+{% block content %}
+
+<div id="myTabs">
+
+  <div class="panel panel-default" id="draggable" data-toggle="tab">
+
+        <!-- {% include 'panels.html' with panelItems('Hotels', hotels) %}
+        {% include 'panels.html' with panelItems('Restaurants', restaurants) %}
+        {% include 'panels.html' with panelItems('Activities', activities) %} -->
+
+        <div class="panel-body">
+          <div>
+            <label for="Hotels" class="opaque">Hotels</label>
+          </div>
+          <div>
+            <div class="col-lg-11">
+              <select class="form-control background-white opaque" id="HotelSelection">
+                {% for hotel in hotels %}
+                  <option value="{{hotel._id|json}}">{{hotel.name}}</option>
+                {% endfor %}
+              </select>
+            </div>
+            <div class="col-lg-1">
+              <a href="#" class="opaque" id="addHotelBtn">
+                <span class="glyphicon glyphicon-plus-sign"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel-body">
+          <div>
+            <label for="Restaurants" class="opaque">Restaurants</label>
+          </div>
+          <div class="col-lg-11">
+            <select class="form-control background-white opaque" id="RestaurantSelection">
+              {% for restaurant in restaurants %}
+                <option value="{{restaurant._id|json}}" class="opaque">{{restaurant.name}}</option>
+              {% endfor %}
+            </select>
+          </div>
+          <div class="col-lg-1">
+            <a href="#" class="opaque" id="addRestaurantBtn">
+              <span class="glyphicon glyphicon-plus-sign"></span>
+            </a>
+          </div>
+        </div>
+
+          <div class="panel-body">
+            <div>
+              <label for="Activities" class="opaque">Activities</label>
+            </div>
+            <div class="col-lg-11">
+              <select class="form-control background-white opaque" id="ActivitySelection">
+                {% for activity in activities %}
+                  <option value="{{activity._id|json}}">{{activity.name}}</option>
+                {% endfor %}
+              </select>
+            </div>
+            <div class="col-lg-1">
+              <a href="#" class="opaque" id="addActivityBtn">
+                <span class="glyphicon glyphicon-plus-sign"></span>
+              </a>
+            </div>
+      </div>
+
+  </div>
+
+  <div class="panel panel-default" id="draggable2" data-toggle="tab">
+
+    <div class="panel-heading">
+      <h3 class="panel-title">
+        <ul class="pagination" id="day-picker">
+          <li id="addDayBtn"><a href="javascript:void(0)">+</a></li>
+          <li id="removeDayBtn"><a href="javascript:void(0)">-</a></li>
+        </ul>
+      </h3>
+    </div>
+
+    <div class="panel-body">
+        <label for="My Hotel" class="opaque">Hotels</label>
+        <ul id="HotelList"></ul>
+    </div>
+    <div class="panel-body">
+        <label for="My Restaurant" class="opaque">Restaurants</label>
+        <ul  id="RestaurantList"></ul>
+    </div>
+    <div class="panel-body">
+        <label for="My Activity" class="opaque">Activities</label>
+        <ul  id="ActivityList"></ul>
+    </div>
+
+  </div>
+
+</div>
+
+
+{% endblock %}

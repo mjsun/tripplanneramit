@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{% block title %}Trip Planner{% endblock %}</title>
+    <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/stylesheets/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link href="/stylesheets/tripPlanner.css" rel="stylesheet">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  </head>
+  <body>
+  	<div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-items">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+
+					<a class="navbar-brand" href="/"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>  Trip Planner</a>
+				</div>
+				<div id="nav-items" class="collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="/">Home</a></li>
+						<li><a href="/about">About</a></li>
+						<li><a href="/contact">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+    <div class="jumbotron" id="map">
+
+    </div>
+		<div class="container content">
+		   {% block content %}{% endblock %}
+		</div>
+		<script src="/bower_components/jquery/dist/jquery.js"></script>
+		<script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<!--<script src="API KEY"></script>-->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9f5Bx1718-esNIGD_w9QG1sK2Uxu1YNA&sensor=true"></script>
+    <script src="/javascripts/day.js"></script>
+	<script src="/javascripts/trip.js"></script>
+    <script src="/javascripts/app.js"></script>
+  </body>
+</html>
